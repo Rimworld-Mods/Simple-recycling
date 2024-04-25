@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <NeolithicRecycleApparel.label>衣服をリサイクルする</NeolithicRecycleApparel.label>
+  <NeolithicRecycleApparel.description>衣服を分解して材料に戻します。\n(新石器時代用)</NeolithicRecycleApparel.description>
+  <NeolithicRecycleApparel.jobString>衣服を分解中</NeolithicRecycleApparel.jobString>
+
+  <RecycleApparel.label>衣服をリサイクルする</RecycleApparel.label>
+  <RecycleApparel.description>衣服を分解して材料に戻します。\n(中世時代用)</RecycleApparel.description>
+  <RecycleApparel.jobString>衣服を分解中</RecycleApparel.jobString>
+
+  <ElectricRecycleApparel.label>衣服をリサイクルする</ElectricRecycleApparel.label>
+  <ElectricRecycleApparel.description>衣服を分解して材料に戻します。\n(電気式)\n\nもしあなたが電動ミシン台で衣服のリサイクルを行うには、以下の研究の両方を完了させる必要があります：\n\n「中世: 衣服のリサイクル」\n「電気工学 基礎」</ElectricRecycleApparel.description>
+  <ElectricRecycleApparel.jobString>衣服を分解中</ElectricRecycleApparel.jobString>
+
+</LanguageData>

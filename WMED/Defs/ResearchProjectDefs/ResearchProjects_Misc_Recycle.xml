@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>ApparelRecycling</defName>
+    <label>(Medieval) apparel recycling</label>
+    <description>Learn medieval ways to recycle old apparel into valuable materials.\n\nIf you wish to recycle on the electric tailor bench, you will need to complete both of the following research projects : apparel recycling and electricity.</description>
+    <baseCost>700</baseCost>
+    <techLevel>Medieval</techLevel>
+    <prerequisites>
+      <li>ComplexClothing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

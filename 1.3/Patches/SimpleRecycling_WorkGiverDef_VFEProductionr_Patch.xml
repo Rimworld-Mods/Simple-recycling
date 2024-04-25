@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Vanilla Furniture Expanded - Production patch -->
+
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<!-- Check Mod name or workshop ID written in PublishedFileId.txt (Confirm existence of other Mod from this Mod) -->
+			<li>Vanilla Furniture Expanded - Production</li>
+			<li>1880253632</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<!-- Large Tailoring Table -->
+			<xpath>*/WorkGiverDef[defName="DoBillsRecycleApparel"]/fixedBillGiverDefs</xpath>
+			<value>
+				<li>VFE_TableTailorLarge</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationTest">
+			<success>Always</success>
+			<xpath>*/ThingDef[defName = "MealSurvivalPack"]</xpath>
+		</nomatch>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Recycle -->
+
+  <JobDef>
+    <defName>DoNeolithicSimpleRecycle</defName>
+    <driverClass>JobDriver_DoBill</driverClass>
+    <reportString>recycling bill at TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>DoSimpleRecycle</defName>
+    <driverClass>JobDriver_DoBill</driverClass>
+    <reportString>recycling bill at TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+</Defs>

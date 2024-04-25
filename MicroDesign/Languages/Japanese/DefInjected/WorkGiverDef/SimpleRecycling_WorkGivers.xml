@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <DoBillsNeolithicSimpleRecycler.label>衣服をリサイクルする</DoBillsNeolithicSimpleRecycler.label>
+  <DoBillsNeolithicSimpleRecycler.verb>リサイクル</DoBillsNeolithicSimpleRecycler.verb>
+  <DoBillsNeolithicSimpleRecycler.gerund>でリサイクルする</DoBillsNeolithicSimpleRecycler.gerund>
+
+  <DoBillsSimpleRecycler.label>衣服をリサイクルする</DoBillsSimpleRecycler.label>
+  <DoBillsSimpleRecycler.verb>リサイクル</DoBillsSimpleRecycler.verb>
+  <DoBillsSimpleRecycler.gerund>でリサイクルする</DoBillsSimpleRecycler.gerund>
+
+</LanguageData>
