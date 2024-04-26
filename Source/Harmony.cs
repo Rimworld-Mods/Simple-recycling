@@ -22,23 +22,27 @@ namespace ArvkusSimpleRecycle
     [HarmonyPatch(typeof(GenRecipe), "MakeRecipeProducts")]
     public static class Patch1
     {
-        private static readonly float Efficiency = 0.3f;
-        private static List<ThingDefCountClass> Receive(Thing apparel){
-            if(apparel == null || apparel.Smeltable){
-                return new List<ThingDefCountClass>();
+        private static readonly float Efficiency = 0.3f; // default smelt efficiency is 0.25f
+
+        private static IEnumerable<Thing> Recycle(Thing apparel){
+            foreach(ThingDefCountClass t in apparel.CostListAdjusted()){
+                int count = (int)Math.Floor(t.count * Efficiency);
+                if(count == 0 || t.thingDef.intricate) continue; // intricate materials are rare items, like components
+                Thing product = ThingMaker.MakeThing(t.thingDef, null);
+                product.stackCount = count;
+                yield return product;
             }
-            List<ThingDefCountClass> list = new List<ThingDefCountClass>(apparel.CostListAdjusted());
-            list.ForEach(t => t.count = (int)Math.Floor(t.count * Efficiency));
-            return list.Where(t => t.count > 0).ToList();
         }
 
-        public static bool Prefix(ref RecipeDef recipeDef, ref Pawn worker, ref List<Thing> ingredients)
+        public static void Postfix(ref RecipeDef recipeDef, ref List<Thing> ingredients, ref IEnumerable<Thing> __result)
         {
             string name = recipeDef.defName;
             if(name == "SimpleRecycleApparel" || name == "NeolithicRecycleApparel"){
-                recipeDef.products = new List<ThingDefCountClass>(Receive(ingredients.First()));
+                Thing apparel = ingredients.First();
+                if(apparel == null || apparel.Smeltable) return; // if apparel is smeltable - do nothing
+                __result = Recycle(apparel);
             }
-            return true;
         }
+
     }
 }

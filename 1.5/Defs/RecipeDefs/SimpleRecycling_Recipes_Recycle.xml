@@ -1,20 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <RecipeDef>
+  <RecipeDef Class="ArvkusSimpleRecycle.RecycleRecipeDef">
     <defName>NeolithicRecycleApparel</defName>
-    <label>recycle neolithic apparel</label>
-    <description>Recycle apparel into raw materials (neolithic age).</description>
+    <label>recycle primitive apparel</label>
+    <description>Recycle primitive apparel into raw materials.</description>
     <jobString>Recycling apparel.</jobString>
-    <workAmount>2400</workAmount>
+    <workAmount>2100</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
-    <uiIconThing>Leather_Bluefur</uiIconThing>
-    <specialProducts>
-      <li>Smelted</li>
-    </specialProducts>
+    <uiIconThing>Leather_Plain</uiIconThing>
     <ingredients>
       <li>
         <filter>
@@ -27,90 +24,9 @@
       </li>
     </ingredients>
     <fixedIngredientFilter>
-      <categories>
-        <li>Apparel</li>
-      </categories>
       <thingDefs>
-        <li MayRequire="Ludeon.RimWorld.Royalty, Ludeon.RimWorld.Biotech">Apparel_Cape</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Collar</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_BodyStrap</li>
-        <li>Apparel_TribalA</li>
-        <li>Apparel_TribalHeaddress</li>
-        <li>Apparel_WarMask</li>
-        <li>Apparel_WarVeil</li>
+        <!-- Filled with C#. Includes all defs with `thingClass = Apparel` and `techLevel = Neolithic` -->
       </thingDefs>
-      <disallowedThingDefs>
-        <li>Apparel_AdvancedHelmet</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_ArmorRecon</li>
-        <li>Apparel_BasicShirt</li>
-        <li>Apparel_BowlerHat</li>
-        <li>Apparel_CollarShirt</li>
-        <li>Apparel_CowboyHat</li>
-        <li>Apparel_Duster</li>
-        <li>Apparel_FirefoampopPack</li>
-        <li>Apparel_FlakJacket</li>
-        <li>Apparel_FlakPants</li>
-        <li>Apparel_FlakVest</li>
-        <li>Apparel_HatHood</li>
-        <li>Apparel_Jacket</li>
-        <li>Apparel_Pants</li>
-        <li>Apparel_Parka</li>
-        <li>Apparel_PlateArmor</li>
-        <li>Apparel_PowerArmor</li>
-        <li>Apparel_PowerArmorHelmet</li>
-        <li>Apparel_PsychicFoilHelmet</li>
-        <li>Apparel_PsychicInsanityLance</li>
-        <li>Apparel_PsychicShockLance</li>
-        <li>Apparel_ShieldBelt</li>
-        <li>Apparel_SimpleHelmet</li>
-        <li>Apparel_SmokepopBelt</li>
-        <li>Apparel_Tuque</li>
-        <li>OrbitalTargeterPowerBeam</li>
-        <li>OrbitalTargeterBombardment</li>
-        <li>TornadoGenerator</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PackBroadshield</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PackJump</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_EltexSkullcap</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusHelmet</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusRobe</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusShirt</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PsyfocusVest</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Beret</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Coronet</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Corset</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Crown</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_CrownStellic</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_HatLadies</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_HatTop</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_RobeRoyal</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ShirtRuffle</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_VestRoyal</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphract</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphractPhoenix</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorCataphractPrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetCataphract</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetCataphractPrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorHelmetReconPrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorLocust</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarineGrenadier</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarineHelmetPrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorMarinePrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_ArmorReconPrestige</li>
-        <li MayRequire="Ludeon.RimWorld.Royalty">Apparel_Gunlink</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Headwrap</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Broadwrap</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_VisageMask</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Slicecap</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_AuthorityCap</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Tailcap</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Shadecone</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Flophat</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Burka</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Robe</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_TortureCrown</li>
-        <li MayRequire="Ludeon.RimWorld.Ideology">Apparel_Blindfold</li>
-      </disallowedThingDefs>
       <specialFiltersToAllow>
         <li>AllowSmeltableApparel</li>
         <li>AllowNonBiocodedApparel</li>
@@ -130,9 +46,6 @@
     <skillRequirements>
       <Crafting>1</Crafting>
     </skillRequirements>
-    <!-- <factionPrerequisiteTags>
-      <li>Tribal</li>
-    </factionPrerequisiteTags> -->
   </RecipeDef>
 
   <RecipeDef>
@@ -143,12 +56,12 @@
       <ResearchProjectDef>ApparelRecycling</ResearchProjectDef>
     </descriptionHyperlinks>
     <jobString>Recycling apparel.</jobString>
-    <workAmount>1800</workAmount>
+    <workAmount>1500</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>Tailor</effectWorking>
     <soundWorking>Recipe_Tailor</soundWorking>
-    <uiIconThing>Leather_Bluefur</uiIconThing>
+    <uiIconThing>Cloth</uiIconThing>
     <specialProducts>
       <li>Smelted</li>
     </specialProducts>

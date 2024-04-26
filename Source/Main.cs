@@ -34,7 +34,7 @@ namespace ArvkusSimpleRecycle
     [DefOf]
     public static class SimpleDefOF
     {
-        static public RecipeDef SimpleRecycleApparel;
+        static public RecycleRecipeDef NeolithicRecycleApparel;
     }
 
 
