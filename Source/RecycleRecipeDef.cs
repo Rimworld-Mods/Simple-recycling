@@ -17,7 +17,7 @@ using RimWorld.Planet;
 using System.Reflection;
 using HarmonyLib;
 
-namespace ArvkusSimpleRecycle
+namespace AVSR
 {
     /*
         All recipes are generated and resolved during game load time
@@ -27,10 +27,14 @@ namespace ArvkusSimpleRecycle
     {
         public override void ResolveReferences()
         {
-            List<ThingDef> neolithicDefsList = DefDatabase<ThingDef>.AllDefs.Where((ThingDef x) => x.techLevel == TechLevel.Neolithic && x.thingClass == typeof(Apparel)).ToList();
             FieldInfo fieldInfo = typeof(ThingFilter).GetField("thingDefs", BindingFlags.NonPublic | BindingFlags.Instance);
-            fieldInfo.SetValue(fixedIngredientFilter, neolithicDefsList);
+            List<ThingDef> xmlDefsList = (List<ThingDef>)fieldInfo.GetValue(fixedIngredientFilter);
+            List<ThingDef> neolithicDefsList = DefDatabase<ThingDef>.AllDefs.Where((ThingDef x) => 
+                x.techLevel == TechLevel.Neolithic && 
+                x.thingClass == typeof(Apparel)
+            ).ToList();
 
+            fieldInfo.SetValue(fixedIngredientFilter, neolithicDefsList.Concat(xmlDefsList).ToList());
             base.ResolveReferences();
         }
 

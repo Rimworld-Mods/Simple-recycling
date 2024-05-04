@@ -1,74 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Simple Recycling</name>
-	<author>Lanilor, Proxyer, Arvkus</author>
-	<packageId>lanilor.simplerecycling</packageId>
+	<author>Arvkus, Proxyer, Lanilor</author>
+	<packageId>arvkus.simplerecycling</packageId>
 	<steamAppId IgnoreIfNoMatchingField="True">2079862064</steamAppId>
+	<modVersion IgnoreIfNoMatchingField="True">1.5.6</modVersion>
 	<url>https://github.com/Arvkus/Simple-recycling</url>
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<modVersion IgnoreIfNoMatchingField="True">2.0.0</modVersion>
 	<loadBefore>
 		<li>Proxyer.JPT.rimsenalJP</li>
 	</loadBefore>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>ludeon.rimworld</li>
 		<li>ludeon.rimworld.royalty</li>
 		<li>ludeon.rimworld.ideology</li>
+		<li>ludeon.rimworld.biotech</li>
+		<li>ludeon.rimworld.anomaly</li>
 		<li>unlimitedhugs.hugslib</li>
-		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
-		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
-		<li>vindar.medievaltimes</li>
 		<li>notfood.MendAndRecycle</li>
 	</loadAfter>
-	<description><![CDATA[
-<color=#5AA9D6><size=17><b>IMPORTANT</b></size></color>
-This mod is an updated version of "Simple Recycling" made by Lanilor to 1.0. All rights to this mod are with Lanilor and I am responsible for all issues that arise with this 1.1-1.5 version. If you have any problems, please report them on this mod's workshop page.
+	<description><![CDATA[<size=20>Simple Recycling</size>
+A simple mod that adds:
+- "Recycle Apparel" research project.
+- "Recycle Neolithic Apparel" bill at crafting spot.
+- "Recycle Apparel" bill at tailoring workbench.
 
-<size=20>Special measures for v1.5.x :</size>
-In RimWorld v1.5, Smelting is now limited to metal. For this reason, it is no longer possible to recycle clothing into the materials it was made from with xml files prior to v1.4.
+<size=20>Info</size>
+- This mod is rewritten with C# patching to fix issues introduced in the 1.5 Rimworld version.
+- Neolithic apparel recycling is not locked behind any research.
+- Materials returned are 25% of the original apparel value (same as smelting).
+- If apparel does not have a recipe, no materials are returned.
+- Only non-smeltable apparel can be recycled.
 
-For this reason, I took special measures for v1.5. Added a patch that forces all non-metal craftable apparel added in Core and 3 types of DLC to be recycled into cloth. All tribal apparel (tribalwear and veils) will be plainleather.
-
-<color=#5AA9D6><size=17>Description</size> :</color>
-v1.5.0
-<size=20>Simple Recyclning</size>
-
-A simple mod that adds recycling of apparel in the same way weapons are smeltable in the core version.
-
-- Added recycle apparel bill to Crafting Spot (only "Lost Tribe" start).
-  No need resarch, but work speed was slow. Supports the neolithic tech age.
-
-To recycle apparel, research "apparel recycling" and then add the bill to a tailoring workbench.
-
-<color=#5AA9D6><size=17>Compatibility</size> :</color>
-for RimWorld 1.3-1.4.
-Added processing and patches to fix problems that could not be researched due to the industrial tech level of mods in the medieval ages. Currently, it is possible to recycle apparels with the following medieval mods.
-
-Medieval Times Unofficial Update (1.4)
-Vanilla Factions Expanded - Medieval
-MendAndRecycle
-Micro Designations
-
-Medieval Overhaul (1.4)
-
-If you have "Micro Designations" enabled in your mod list, clicking on the item you want to recycle in-game will reveal a corresponding "recycle at workbench" button.
-This is available for both Tribal Start and Normal Start.
-
-I would like to thank <b>g0ldheart_rr</b> and <b>pgames-food</b> for suggesting this idea.
-
-
-<color=#5AA9D6><size=17>Translation</size> :</color>
+<color><size=20>Translations</size></color>
 English, Japanese
 
+<size=20>Credits</size>
+Current maintainer: Arvkus
+Github: https://github.com/Rimworld-Mods/Simple-recycling
 
-Original mod : Simple Recycling ; RimWorld 1.0 version Original
-Original Mod author : Lanilor
-Steam Workshop Link : 
+Old mod maintainer: Proxyer (1.1-1.5 versions)
+https://steamcommunity.com/sharedfiles/filedetails/?id=2079862064
+
+Original mod author: Lanilor (1.0 version)
 https://steamcommunity.com/sharedfiles/filedetails/?id=1419006111
-https://github.com/Lanilor/
-
- ]]></description>
+]]></description>
 </ModMetaData>

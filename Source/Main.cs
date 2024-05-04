@@ -17,14 +17,14 @@ using RimWorld.Planet;
 using System.Reflection;
 using HarmonyLib;
 
-namespace ArvkusSimpleRecycle
+namespace AVSR
 {
     [StaticConstructorOnStartup]
     public static class Start
     {
         static Start()
         {
-            Harmony harmony = new Harmony("ArvkusSimpleRecycle");
+            Harmony harmony = new Harmony("AVSR");
             harmony.PatchAll( Assembly.GetExecutingAssembly() );
         }
     }

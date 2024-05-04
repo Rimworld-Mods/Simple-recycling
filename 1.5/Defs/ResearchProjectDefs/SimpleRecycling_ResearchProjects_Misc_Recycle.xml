@@ -6,7 +6,7 @@
     <label>apparel recycling</label>
     <description>Learn how to recycle old apparel into valuable materials.</description>
     <baseCost>700</baseCost>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Medieval</techLevel>
     <prerequisites>
       <li>ComplexClothing</li>
     </prerequisites>

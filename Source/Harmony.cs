@@ -17,12 +17,12 @@ using RimWorld.Planet;
 using System.Reflection;
 using HarmonyLib;
 
-namespace ArvkusSimpleRecycle
+namespace AVSR
 {
     [HarmonyPatch(typeof(GenRecipe), "MakeRecipeProducts")]
-    public static class Patch1
+    public static class RecycleRecipeProductsPatch
     {
-        private static readonly float Efficiency = 0.3f; // default smelt efficiency is 0.25f
+        private static readonly float Efficiency = 0.25f; // default smelt efficiency is 0.25f
 
         private static IEnumerable<Thing> Recycle(Thing apparel){
             foreach(ThingDefCountClass t in apparel.CostListAdjusted()){
@@ -39,7 +39,7 @@ namespace ArvkusSimpleRecycle
             string name = recipeDef.defName;
             if(name == "SimpleRecycleApparel" || name == "NeolithicRecycleApparel"){
                 Thing apparel = ingredients.First();
-                if(apparel == null || apparel.Smeltable) return; // if apparel is smeltable - do nothing
+                if(apparel == null || apparel.Smeltable) return; // if apparel is smeltable - do nothing, smelt functionionality will return materials
                 __result = Recycle(apparel);
             }
         }
