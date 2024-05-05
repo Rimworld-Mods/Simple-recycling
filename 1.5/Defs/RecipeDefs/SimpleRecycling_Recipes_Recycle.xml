@@ -79,9 +79,9 @@
       <categories>
         <li>Apparel</li>
       </categories>
-      <disallowedCategories>
+      <!-- <disallowedCategories>
         <li>ApparelUtility</li>
-      </disallowedCategories>
+      </disallowedCategories> -->
       <specialFiltersToDisallow>
         <li>AllowSmeltableApparel</li>
       </specialFiltersToDisallow>

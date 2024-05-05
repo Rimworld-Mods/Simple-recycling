@@ -32,8 +32,8 @@
 	<description><![CDATA[<size=20>Simple Recycling</size>
 A simple mod that adds:
 - "Recycle Apparel" research project.
-- "Recycle Neolithic Apparel" bill at crafting spot.
-- "Recycle Apparel" bill at tailoring workbench.
+- "Recycle Neolithic Apparel" bill at a crafting spot.
+- "Recycle Apparel" bill at a tailoring workbench.
 
 <size=20>Info</size>
 - This mod is rewritten with C# patching to fix issues introduced in the 1.5 Rimworld version.
