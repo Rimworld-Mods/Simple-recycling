@@ -22,11 +22,10 @@ namespace AVSR
     [HarmonyPatch(typeof(GenRecipe), "MakeRecipeProducts")]
     public static class RecycleRecipeProductsPatch
     {
-        private static readonly float Efficiency = 0.25f; // default smelt efficiency is 0.25f
-
         private static IEnumerable<Thing> Recycle(Thing apparel){
+            float multiplier = Settings.isDurabilityInfluenced ? apparel.HitPoints / (float)apparel.MaxHitPoints : 1.0f;
             foreach(ThingDefCountClass t in apparel.CostListAdjusted()){
-                int count = (int)Math.Floor(t.count * Efficiency);
+                int count = (int)Mathf.Floor(t.count * Settings.efficiency * multiplier);
                 if(count == 0 || t.thingDef.intricate) continue; // intricate materials are rare items, like components
                 Thing product = ThingMaker.MakeThing(t.thingDef, null);
                 product.stackCount = count;
