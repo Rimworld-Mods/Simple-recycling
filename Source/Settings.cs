@@ -26,9 +26,9 @@ namespace AVSR
 
         public override void ExposeData()
         {
+            Scribe_Values.Look(ref efficiency, "efficiency", 0.25f, true);
+            Scribe_Values.Look(ref isDurabilityInfluenced, "isDurabilityInfluenced", true, true);
             base.ExposeData();
-            Scribe_Values.Look(ref efficiency, "efficiency", defaultValue: 0.25f, forceSave: true);
-            Scribe_Values.Look(ref isDurabilityInfluenced, "isDurabilityInfluenced", defaultValue: true, forceSave: true);
         }
 
     }

@@ -23,6 +23,7 @@ namespace AVSR
     {
         public SimpleRecycleMod(ModContentPack mcp) : base(mcp)
         {
+            GetSettings<Settings>();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
