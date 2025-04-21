@@ -6,7 +6,7 @@
     <label>recycle primitive apparel</label>
     <description>Recycle primitive apparel into raw materials.</description>
     <jobString>Recycling apparel.</jobString>
-    <workAmount>2100</workAmount>
+    <workAmount>2000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>Tailor</effectWorking>
@@ -25,7 +25,6 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Apparel_Cape</li>
         <!-- Filled with C#. Includes all defs with `thingClass = Apparel` and `techLevel = Neolithic` -->
       </thingDefs>
       <specialFiltersToDisallow>
@@ -55,7 +54,7 @@
       <ResearchProjectDef>ApparelRecycling</ResearchProjectDef>
     </descriptionHyperlinks>
     <jobString>Recycling apparel.</jobString>
-    <workAmount>1500</workAmount>
+    <workAmount>1300</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
     <effectWorking>Tailor</effectWorking>

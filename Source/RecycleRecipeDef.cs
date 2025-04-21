@@ -27,11 +27,14 @@ namespace AVSR
     {
         public override void ResolveReferences()
         {
+            string[] forceIncludeDefs = new string[] {"Apparel_Cape"};
+            
             FieldInfo fieldInfo = typeof(ThingFilter).GetField("thingDefs", BindingFlags.NonPublic | BindingFlags.Instance);
             List<ThingDef> xmlDefsList = (List<ThingDef>)fieldInfo.GetValue(fixedIngredientFilter);
             List<ThingDef> neolithicDefsList = DefDatabase<ThingDef>.AllDefs.Where((ThingDef x) => 
                 x.techLevel == TechLevel.Neolithic && 
-                x.thingClass == typeof(Apparel)
+                x.thingClass == typeof(Apparel) ||
+                forceIncludeDefs.Contains(x.defName) 
             ).ToList();
 
             fieldInfo.SetValue(fixedIngredientFilter, neolithicDefsList.Concat(xmlDefsList).ToList());
