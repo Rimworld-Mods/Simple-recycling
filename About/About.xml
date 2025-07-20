@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Simple Recycling</name>
+	<name>Simple Apparel Recycling</name>
 	<author>Arvkus, Proxyer, Lanilor</author>
 	<packageId>arvkus.simplerecycling</packageId>
 	<steamAppId IgnoreIfNoMatchingField="True">3239309389</steamAppId>
