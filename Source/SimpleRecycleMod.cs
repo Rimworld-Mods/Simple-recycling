@@ -40,7 +40,7 @@ namespace AVSR
 
         public override string SettingsCategory()
         {
-            return "Simple Recycling";
+            return "Simple Apparel Recycling";
         }
     }
 }
